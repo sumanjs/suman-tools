@@ -24,6 +24,11 @@ var options = [
         help: 'Use this option to send each item of a JSON array to stdout.'
     },
     {
+        names: ['to-json'],
+        type: 'string',
+        help: 'Use this option to write a JSON string to stdout from x, given --to-json="x".'
+    },
+    {
         names: ['is-symlinked-locally'],
         type: 'string',
         help: 'Use this option to send each item of a JSON array to stdout.'
@@ -49,6 +54,10 @@ if (opts.extract_json_array) {
     arr.forEach(function (a) {
         console.log(a);
     });
+    process.exit(0);
+}
+if (opts.to_json) {
+    console.log(opts.to_json);
     process.exit(0);
 }
 var root = findProjectRoot(process.cwd());

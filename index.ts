@@ -8,7 +8,6 @@ import * as util from 'util';
 import * as assert from 'assert';
 import * as cp from 'child_process';
 
-
 //npm
 const dashdash = require('dashdash');
 const {findProjectRoot} = require('residence');
@@ -31,6 +30,11 @@ let options = [
     names: ['is-symlinked-globally'],
     type: 'string',
     help: 'Use this option to send each item of a JSON array to stdout.'
+  },
+  {
+    names: ['to-json'],
+    type: 'string',
+    help: 'Use this option to write a JSON string to stdout from x, given --to-json="x".'
   },
   {
     names: ['is-symlinked-locally'],
@@ -64,6 +68,11 @@ if (opts.extract_json_array) {
   process.exit(0);
 }
 
+if (opts.to_json) {
+  console.log(opts.to_json);
+  process.exit(0);
+}
+
 const root = findProjectRoot(process.cwd());
 
 if (opts.is_symlinked_locally) {
@@ -75,7 +84,7 @@ if (opts.is_symlinked_locally) {
     process.exit(0);
   }
   catch (err) {
-    if(/no such file or directory/.exec(err.message)){
+    if (/no such file or directory/.exec(err.message)) {
       console.log('negative');
       process.exit(0);
     }
@@ -95,7 +104,7 @@ if (opts.is_symlinked_globally) {
     process.exit(0);
   }
   catch (err) {
-    if(/no such file or directory/.exec(err.message)){
+    if (/no such file or directory/.exec(err.message)) {
       console.log('negative');
       process.exit(0);
     }
