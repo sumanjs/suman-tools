@@ -1,6 +1,6 @@
 {
   "name": "suman-tools",
-  "version": "0.0.104",
+  "version": "0.0.105",
   "description": "Special command line tools to aid with @transform.sh and @run.sh files.",
   "main": "index.js",
   "typings": "index.d.ts",
