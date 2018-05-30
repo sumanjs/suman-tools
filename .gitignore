@@ -1,3 +1,9 @@
+
+### folders
 .idea
 node_modules
 *.log
+dist/*
+
+### negation
+!dist/README.md

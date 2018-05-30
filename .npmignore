@@ -4,6 +4,7 @@ test
 scripts
 .idea
 node_modules
+src
 
 ### matching
 *.ts
@@ -11,12 +12,10 @@ node_modules
 *.txt
 *.json
 *.log
-*.sh
 *.yml
 
 ### files
 .npmignore
 .gitignore
 
-### negation
-!*.d.ts
+
