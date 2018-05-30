@@ -11,7 +11,7 @@ import * as cp from 'child_process';
 //npm
 const dashdash = require('dashdash');
 const {findProjectRoot} = require('residence');
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 
 //project
 
@@ -112,3 +112,5 @@ if (opts.is_symlinked_globally) {
     process.exit(1);
   }
 }
+
+throw new Error('no option selected/matched.');
