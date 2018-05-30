@@ -1,12 +1,12 @@
 {
   "name": "suman-tools",
-  "version": "0.0.105",
+  "version": "0.0.106",
   "description": "Special command line tools to aid with @transform.sh and @run.sh files.",
-  "main": "index.js",
-  "typings": "index.d.ts",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "bin": {
-    "suman-tools": "index.js"
+    "suman-tools": "dist/index.js"
   },
   "scripts": {
     "test": "suman"
@@ -32,12 +32,11 @@
   },
   "homepage": "https://github.com/sumanjs/suman-tools#readme",
   "dependencies": {
-    "chalk": "^2.0.1",
+    "chalk": "^2.4.1",
     "dashdash": "^1.14.1",
     "residence": "0.0.205"
   },
   "devDependencies": {
-    "@types/chalk": "^0.4.31",
-    "@types/node": "^8.0.7"
+    "@types/node": "^10.1.4"
   }
 }
