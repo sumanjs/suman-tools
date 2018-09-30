@@ -9,7 +9,7 @@
     "suman-tools": "dist/index.js"
   },
   "scripts": {
-    "test": "suman"
+    "test": "suman test"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "dashdash": "^1.14.1",
-    "residence": "0.0.205"
+    "residence": "latest"
   },
   "devDependencies": {
     "@types/node": "^10.1.4"
